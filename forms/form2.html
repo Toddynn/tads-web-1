@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Exercício 2 - Formulário com Tabela</title>
+	</head>
+	<body>
+		<h2>Exercício 2</h2>
+		<form>
+			<table>
+				<tr>
+					<td><label for="nome">Nome:</label></td>
+					<td><input type="text" id="nome" name="nome" /></td>
+				</tr>
+				<tr>
+					<td><label for="sexo">Sexo:</label></td>
+					<td>
+						<select id="sexo" name="sexo">
+							<option value="">Selecione</option>
+							<option value="masculino">Masculino</option>
+							<option value="feminino">Feminino</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="profissao">Profissão:</label></td>
+					<td><input type="text" id="profissao" name="profissao" /></td>
+				</tr>
+				<tr>
+					<td><label for="idade">Idade:</label></td>
+					<td><input type="text" id="idade" name="idade" /></td>
+				</tr>
+				<tr>
+					<td><label for="descricao">Descrição:</label></td>
+					<td><textarea id="descricao" name="descricao" rows="4" cols="30"></textarea></td>
+				</tr>
+				<tr>
+					<td>Escolaridade:</td>
+					<td>
+						<input type="radio" id="medio" name="escolaridade" value="Ensino Médio" />
+						<label for="medio">Ensino Médio</label><br />
+						<input type="radio" id="graduado" name="escolaridade" value="Graduado" />
+						<label for="graduado">Graduado</label><br />
+						<input type="radio" id="pos" name="escolaridade" value="Pós-Graduado" />
+						<label for="pos">Pós-Graduado</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Esportes:</td>
+					<td>
+						<input type="checkbox" id="futebol" name="esportes" value="Futebol" />
+						<label for="futebol">Futebol</label><br />
+						<input type="checkbox" id="basquete" name="esportes" value="Basquete" />
+						<label for="basquete">Basquete</label><br />
+						<input type="checkbox" id="volei" name="esportes" value="Vôlei" />
+						<label for="volei">Vôlei</label><br />
+						<input type="checkbox" id="atletismo" name="esportes" value="Atletismo" />
+						<label for="atletismo">Atletismo</label><br />
+						<input type="checkbox" id="artes" name="esportes" value="Artes Marciais" />
+						<label for="artes">Artes Marciais</label><br />
+						<input type="checkbox" id="musculacao" name="esportes" value="Musculação" />
+						<label for="musculacao">Musculação</label><br />
+						<input type="checkbox" id="outros" name="esportes" value="Outros" />
+						<label for="outros">Outros</label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="Enviar" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

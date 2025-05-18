@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Cadastro</title>
+	</head>
+	<body>
+		<h2>Cadastre-se!</h2>
+		<form>
+			<table border="1" cellpadding="5">
+				<tr>
+					<th>Identificação</th>
+					<td>Nome completo: <input type="text" required /></td>
+					<td>Email: <input type="email" required /></td>
+					<td>Senha: <input type="password" required /></td>
+				</tr>
+				<tr>
+					<th>Contato</th>
+					<td colspan="3">Telefone: <input type="tel" /></td>
+				</tr>
+				<tr>
+					<th>Outros</th>
+					<td colspan="3">Site pessoal: <input type="url" /></td>
+				</tr>
+				<tr>
+					<th>Datas</th>
+					<td>Data de nascimento: <input type="date" /></td>
+					<td>Registro: <input type="date" /></td>
+					<td>Mês favorito: <input type="text" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Semana útil: <input type="text" /></td>
+					<td colspan="2">Horário preferido: <input type="time" /></td>
+				</tr>
+				<tr>
+					<th>Estilo</th>
+					<td colspan="3">
+						Foto de perfil: <input type="file" /> <br />
+						Cor do perfil: <input type="color" />
+					</td>
+				</tr>
+				<tr>
+					<th>Preferências</th>
+					<td colspan="3">
+						Interesses:
+						<input type="checkbox" /> Tecnologia <input type="checkbox" /> Arte <input type="checkbox" /> Esportes
+						<input type="checkbox" /> Música <input type="checkbox" /> Ciência <br /><br />
+						Sexo:
+						<input type="radio" name="sexo" /> Masculino <input type="radio" name="sexo" /> Feminino <input type="radio" name="sexo" /> Outro
+						<br /><br />
+						Satisfação com a plataforma:
+						<input type="range" min="0" max="10" /> <br /><br />
+						Idioma preferido:
+						<select>
+							<option>Português</option>
+							<option>Inglês</option>
+							<option>Espanhol</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>Notificações</th>
+					<td colspan="3">
+						<input type="checkbox" /> Receber por email <input type="checkbox" /> Receber por SMS <input type="checkbox" /> Notificações por
+						app
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<input type="submit" value="Cadastrar" />
+						<input type="reset" value="Limpar formulário" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

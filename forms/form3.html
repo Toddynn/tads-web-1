@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Reserva de Viagem</title>
+	</head>
+	<body>
+		<h2>Formulário de Reserva de Viagem</h2>
+		<form>
+			<table cellpadding="5">
+				<tr>
+					<td><label for="nome">Nome:</label></td>
+					<td><input type="text" id="nome" name="nome" /></td>
+				</tr>
+				<tr>
+					<td><label for="destino">Destino:</label></td>
+					<td><input type="text" id="destino" name="destino" /></td>
+				</tr>
+				<tr>
+					<td><label for="ida">Data da ida:</label></td>
+					<td><input type="date" id="ida" name="ida" /></td>
+				</tr>
+				<tr>
+					<td><label for="volta">Data da volta:</label></td>
+					<td><input type="date" id="volta" name="volta" /></td>
+				</tr>
+				<tr>
+					<td><label for="tipo">Tipo de viagem:</label></td>
+					<td>
+						<select id="tipo" name="tipo">
+							<option value="passeio">Passeio</option>
+							<option value="trabalho">Trabalho</option>
+							<option value="estudo">Estudo</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Reservar" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
