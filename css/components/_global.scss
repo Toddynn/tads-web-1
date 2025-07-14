@@ -1,0 +1,87 @@
+.logo {
+	font-size: $font-size-xl;
+	font-weight: $font-weight-medium;
+	font-family: $font-family-montserrat;
+}
+.nav-links {
+	display: flex; // Padrão para telas grandes: visível
+	align-items: center;
+	gap: $spacing-4;
+
+	.nav-item {
+		&:hover {
+			color: $color-black;
+			border-bottom: 1px solid $color-black;
+			transition: $transition-all;
+		}
+	}
+
+	// Ocultar nav-links (os itens do menu) em telas menores que 768px (MD breakpoint)
+	@media (max-width: 767px) {
+		// Equivalente a 'md:hidden' no Tailwind
+		display: none;
+	}
+}
+
+.menu-toggle {
+	display: none; // Padrão para telas grandes: oculto
+	background: none;
+	border: none;
+	color: $color-gray-700;
+	cursor: pointer;
+	padding: $spacing-2;
+	font-size: $font-size-2xl;
+
+	// Mostrar o menu-toggle (ícone hamburguer) em telas menores que 768px (MD breakpoint)
+	@media (max-width: 767px) {
+		// Equivalente a 'md:block' no Tailwind
+		display: block; // Use 'block' para que ele apareça e mantenha o alinhamento como botão
+	}
+}
+
+.footer-brand {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-4;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	.logo {
+		font-size: $font-size-xl;
+		font-family: $font-family-montserrat;
+	}
+}
+
+.footer-description {
+	font-size: $font-size-lg;
+	color: $color-gray-400;
+	font-weight: $font-weight-normal;
+	line-height: 1.625;
+	text-wrap: pretty;
+}
+
+.footer-icons {
+	display: flex;
+	gap: $spacing-4;
+	margin-top: $spacing-4;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-divider {
+	width: 100%;
+	border: none;
+	border-top: 0.5px solid $color-gray-800;
+}
+
+.footer-copyright {
+	padding-top: $spacing-6;
+	text-align: center;
+	color: $color-gray-400;
+	font-weight: $font-weight-light;
+	font-size: $font-size-xs;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

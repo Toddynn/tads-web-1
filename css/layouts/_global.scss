@@ -1,0 +1,33 @@
+.site-body {
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+}
+
+.main-nav {
+	user-select: none;
+	position: sticky;
+	z-index: 20;
+	background-color: $background-color-nav;
+	backdrop-filter: blur(5px);
+	box-shadow: $shadow-md;
+	color: $color-gray-700;
+	width: 100%;
+	padding: $spacing-4;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: $spacing-4;
+}
+
+.main-footer {
+	padding: $spacing-12 $spacing-4;
+	color: $color-white;
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-6;
+	align-items: center;
+	justify-content: center;
+	background-color: $background-color-footer;
+}

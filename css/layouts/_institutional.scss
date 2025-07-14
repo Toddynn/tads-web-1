@@ -1,0 +1,25 @@
+.hero-section {
+	position: relative;
+	user-select: none;
+	overflow: hidden;
+	color: $text-color-hero-title;
+	min-height: 100dvh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	gap: $spacing-6;
+}
+
+.about-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: $spacing-6;
+	padding: $spacing-12 $spacing-4;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
+}

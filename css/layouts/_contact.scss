@@ -1,0 +1,25 @@
+.contact-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: $spacing-12 $spacing-4;
+	min-height: $min-h-screen;
+	gap: $spacing-8;
+	justify-content: center;
+	text-align: center;
+}
+
+.contact-content-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-8;
+	width: 100%;
+	max-width: $max-w-4xl;
+
+	@media (min-width: 768px) {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: $spacing-12;
+		align-items: stretch;
+	}
+}

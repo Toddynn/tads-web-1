@@ -1,0 +1,29 @@
+// Variables
+@import 'variables/global';
+
+@import 'variables/institutional';
+@import 'variables/projects';
+@import 'variables/services';
+@import 'variables/testimonials';
+@import 'variables/contact';
+
+// Base
+@import 'base';
+
+// Layout
+@import 'layouts/global';
+
+@import 'layouts/institutional';
+@import 'layouts/projects';
+@import 'layouts/services';
+@import 'layouts/testimonials';
+@import 'layouts/contact';
+
+// Components
+@import 'components/global';
+
+@import 'components/institutional';
+@import 'components/projects';
+@import 'components/services';
+@import 'components/testimonials';
+@import 'components/contact';

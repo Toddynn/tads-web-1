@@ -1,0 +1,10 @@
+.projects-section {
+	display: flex;
+	padding: $spacing-12 $spacing-4 $spacing-48 $spacing-4;
+	min-height: $min-h-screen;
+	flex-direction: column;
+	align-items: center;
+	gap: $spacing-12;
+	justify-content: center;
+	text-align: center;
+}
