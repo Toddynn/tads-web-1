@@ -1,0 +1,100 @@
+// Variáveis SASS para padronização de cores e espaçamento
+$card-bg-color: #ffffff;
+$card-border-color: #e0e0e0;
+$card-padding: 20px;
+$card-border-radius: 8px;
+$card-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+$title-color: #333333;
+$price-color: #28a745; // Um verde para o preço
+$button-bg-color: #007bff; // Azul padrão do Bootstrap
+$button-text-color: #ffffff;
+$button-hover-darken-percentage: 10%; // Percentual para escurecer no hover
+
+// Mixin para centralizar conteúdo
+@mixin center-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Estilos globais e de layout para centralizar o container do card
+body {
+	font-family: sans-serif;
+	margin: 0;
+	@include center-flex();
+	min-height: 100vh;
+	background-color: #f0f0f0;
+}
+
+.product-card-container {
+	@include center-flex();
+	flex-wrap: wrap;
+	gap: 30px;
+	padding: 20px;
+	width: 100%;
+}
+
+// Componente de Cartão de Produto
+.product-card {
+	background-color: $card-bg-color;
+	border: 1px solid $card-border-color;
+	border-radius: $card-border-radius;
+	padding: $card-padding;
+	box-shadow: $card-shadow;
+	text-align: center;
+	max-width: 300px;
+	width: 100%;
+	box-sizing: border-box; // Inclui padding e border na largura
+
+	// Elementos aninhados (reflete a estrutura do HTML)
+	&__title {
+		color: $title-color;
+		font-size: 1.8em;
+		margin-bottom: 10px;
+	}
+
+	&__price {
+		color: $price-color;
+		font-size: 1.5em;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	&__button {
+		background-color: $button-bg-color;
+		color: $button-text-color;
+		border: none;
+		padding: 12px 25px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 1.1em;
+		transition: background-color 0.3s ease; // Transição suave
+
+		&:hover {
+			background-color: darken($button-bg-color, $button-hover-darken-percentage);
+		}
+	}
+
+	// Exemplo de variação do card
+	&--alt {
+		border-color: #c0c0c0;
+		.product-card__title {
+			color: #444;
+		}
+		.product-card__price {
+			color: #dc3545; // Um vermelho para variação de preço
+		}
+	}
+}
+
+// Responsividade simples
+@media (max-width: 500px) {
+	.product-card-container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.product-card {
+		max-width: 90%;
+	}
+}

@@ -1,0 +1,18 @@
+// Variáveis do Grid
+$total-columns: 12;
+$gutter-width: 20px; // Espaçamento entre as colunas
+$container-max-width: 1200px; // Largura máxima do container
+
+// Cores dos Painéis
+$panel-light-bg: #f8f9fa;
+$panel-light-text: #343a40;
+$panel-light-border: #dee2e6;
+
+$panel-dark-bg: #343a40;
+$panel-dark-text: #f8f9fa;
+$panel-dark-border: #495057;
+
+// Outras variáveis comuns
+$default-padding: 15px;
+$default-border-radius: 8px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);

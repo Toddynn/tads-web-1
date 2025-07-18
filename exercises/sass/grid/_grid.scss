@@ -1,0 +1,58 @@
+// _grid.scss
+.container {
+	width: 100%;
+	max-width: $container-max-width;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: calc(#{$gutter-width} / 2); // Interpolação para garantir que $gutter-width é um valor numérico
+	padding-right: calc(#{$gutter-width} / 2); // Interpolação
+	box-sizing: border-box;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(-#{$gutter-width} / 2); // Interpolação para garantir que $gutter-width é um valor numérico
+	margin-right: calc(-#{$gutter-width} / 2); // Interpolação
+}
+
+@for $i from 1 through $total-columns {
+	.col-#{$i} {
+		flex: 0 0 auto;
+		// Interpolação explícita de 100% e $total-columns e $i
+		// Para garantir que SASS entenda que são valores para a operação de cálculo dentro de calc()
+		width: calc(100% / #{$total-columns} * #{$i});
+		padding: 0 calc(#{$gutter-width} / 2); // Interpolação
+		box-sizing: border-box;
+	}
+}
+
+// Responsividade para o grid (exemplo: colunas empilham em telas pequenas)
+@media (max-width: 768px) {
+	@for $i from 1 through $total-columns {
+		.col-md-#{$i} {
+			flex: 0 0 auto;
+			width: calc(100% / #{$total-columns} * #{$i}); // Interpolação aqui também
+		}
+	}
+	// Por padrão, todas as colunas se comportarão como col-12 se não tiverem um breakpoint definido para a tela menor
+	.col-1,
+	.col-2,
+	.col-3,
+	.col-4,
+	.col-5,
+	.col-6,
+	.col-7,
+	.col-8,
+	.col-9,
+	.col-10,
+	.col-11,
+	.col-12 {
+		width: 100%; // Em telas menores que 768px, todas as colunas ocupam 100% da largura
+		margin-bottom: $gutter-width; // Adiciona espaçamento vertical
+	}
+	.col-12:last-child,
+	.col-md-12:last-child {
+		margin-bottom: 0;
+	}
+}

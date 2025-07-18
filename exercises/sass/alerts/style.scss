@@ -1,0 +1,39 @@
+// Importa variáveis e mixins
+@import 'variables';
+@import 'mixins';
+
+// Estilos gerais do corpo para centralizar o container
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start; // Alinhar ao topo para múltiplos alertas
+	min-height: 100vh;
+	background-color: #f0f0f0;
+	padding: 30px 20px;
+	box-sizing: border-box;
+}
+
+.alert-container {
+	width: 100%;
+	max-width: 600px;
+}
+
+// Estilo base para todos os alertas
+.alert {
+	@include alert-base;
+
+	// Modificadores para tipos específicos de alerta
+	&--success {
+		@include alert-type($color-success-bg, $color-success-border, $color-success-text);
+	}
+
+	&--warning {
+		@include alert-type($color-warning-bg, $color-warning-border, $color-warning-text);
+	}
+
+	&--error {
+		@include alert-type($color-error-bg, $color-error-border, $color-error-text);
+	}
+}

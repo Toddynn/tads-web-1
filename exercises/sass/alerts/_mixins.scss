@@ -1,0 +1,15 @@
+@mixin alert-base {
+	padding: $alert-padding;
+	margin-bottom: $alert-margin-bottom;
+	font-size: $alert-font-size;
+	line-height: $alert-line-height;
+	border-radius: $alert-border-radius;
+	border: 1px solid transparent; // Borda padrão transparente para base
+	text-align: center; // Centraliza o texto conforme a imagem de exemplo
+}
+
+@mixin alert-type($bg-color, $border-color, $text-color) {
+	background-color: $bg-color;
+	border-color: $border-color;
+	color: $text-color;
+}
